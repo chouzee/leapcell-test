@@ -1,1 +1,5 @@
-microdot
+flask
+markdown
+gunicorn
+leapcell
+python-dotenv
