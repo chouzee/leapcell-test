@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os
 import markdown
 import datetime
@@ -13,9 +13,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return 'h'
+    return 'home'
 
-
+@app.route("/api")
+def api():
+    return jsonify("привіт": "hello", "бувай": "goodbye")
 
 if __name__ == "__main__":
     app.run(debug=True)
