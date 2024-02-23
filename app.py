@@ -17,7 +17,7 @@ def index():
 
 @app.route("/api")
 def api():
-    return jsonify("привіт": "hello", "бувай": "goodbye")
+    return jsonify({"привіт": "hello", "бувай": "goodbye"})
 
 if __name__ == "__main__":
     app.run(debug=True)
